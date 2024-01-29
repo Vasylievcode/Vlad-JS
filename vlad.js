@@ -34,9 +34,17 @@ for(const header of allH3newClass){
 const findSpecialLi = document.querySelector('li[data-topic="navigation"]')
 console.log('10. знайти елемент li який має атрибут data-topic з значенням "navigation" і виведи його в консоль;',findSpecialLi)
 // 11. додай для знайденого елемента data-topic="navigation" атрибут style і зроби його backgroundColor жовтим
-findSpecialLi.dataset.syle = "backgroundColor: yellow;"
+findSpecialLi.setAttribute('style', 'background-color: yellow;')
 // 12. у елемента data-topic="navigation" знайди елемент р і зміни його текст на "Я змінив тут текст!".
-// 13. створи const currentTopic = "manipulation"; після цього знайди елемент у якогоо атрибут data-topic має значення, яке зберігається у змінній currentTopic і виведи його в консоль;
+const findSpecialLiP = findSpecialLi.querySelector('p')
+console.log('12', findSpecialLiP)
+// 13. створи const currentTopic = "manipulation";
+// після цього знайди елемент у якогоо атрибут data-topic має значення, яке зберігається у змінній currentTopic 
+// і виведи його в консоль;
+const currentTopic = "manipulation";
+const elementWithCurrentTopic = document.querySelector(`[data-topic="${currentTopic}"]`)
+console.log('13.',elementWithCurrentTopic)
+
 // 14. додай до знайденого елемента атрибут style і зроби його backgroundColor блакитним;
 // 15. знайти в документі заголовок, який має class="completed" і виведи його в консоль;
 // 16. видали елемент li в якому знаходиться заголовок, який має class="completed"
